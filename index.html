@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5865f2" />
+    <title>Alina's Birthday Quiz ✦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      .start-screen { display:flex; flex-direction:column; align-items:center; text-align:center; }
+      .start-icon { width:92px; height:92px; display:grid; place-items:center; margin:0 auto 24px; border-radius:27px; background:linear-gradient(135deg,#5865f2,#28c7a5); box-shadow:0 13px 26px #5865f23b; font-size:2.8rem; transform:rotate(-5deg); }
+      .start-copy { max-width:420px; margin:19px auto 24px; color:#59627d; line-height:1.7; }
+      .quiz-facts { display:flex; justify-content:center; gap:9px; flex-wrap:wrap; margin:0 0 30px; }
+      .quiz-facts span { padding:8px 11px; border-radius:99px; background:#edf0ff; color:#40508d; font-size:.73rem; font-weight:800; }
+      .start-screen .button { min-width:210px; }
+      .error-mode .page-shell { background:radial-gradient(circle at 15% 12%,#ffdd65 0 4%,transparent 25%),radial-gradient(circle at 88% 83%,#bd152e 0 6%,transparent 32%),linear-gradient(145deg,#7c081e,#ed2638 52%,#610415); }
+      .error-mode .glow--one { background:#ffdf63; opacity:.42; }
+      .error-mode .glow--two { background:#ec203a; opacity:.52; }
+      .error-mode .quiz-card { border-color:#ffb0a8; box-shadow:0 25px 70px #28000ab8; }
+      .error-mode .screamer-frame { box-shadow:0 0 0 5px #ff3c35,0 0 38px #ff4d42a8; }
+      .error-mode .button--dark { background:#8e1025; box-shadow:0 8px 0 #51000f; }
+      .error-mode .button--dark:hover { box-shadow:0 11px 0 #51000f; }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="glow glow--one"></div><div class="glow glow--two"></div>
+      <section class="quiz-card" aria-live="polite">
+        <div class="eyebrow"><span>✦</span> ALINA'S BDAY QUIZ <span>✦</span></div>
+        <div id="start-screen" class="screen start-screen">
+          <div class="start-icon" aria-hidden="true">🎧</div>
+          <p class="kicker">ДЕНЬ РОЖДЕНИЯ АЛИНЫ</p>
+          <h1>Готова к праздничному рэп-квизу?</h1>
+          <p class="start-copy">10 вопросов про треки и строки. Пройди всё до конца — там будет сюрприз.</p>
+          <div class="quiz-facts"><span>10 вопросов</span><span>4 исполнителя</span><span>1 попытка</span></div>
+          <button id="start-button" class="button">Начать квиз <span aria-hidden="true">→</span></button>
+        </div>
+        <div id="quiz-screen">
+          <div class="topline"><span id="progress-label">Вопрос 1 из 10</span><span id="score-label">Очки: 0</span></div>
+          <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+          <p id="question-type" class="kicker">УГАДАЙ ТРЕК</p>
+          <h1 id="question">Кто исполняет трек «Black Siemens»?</h1>
+          <div id="answers" class="answers"></div>
+          <p class="hint">Проебешь - отправишь меня на концерт моргена</p>
+        </div>
+
+        <div id="wrong-screen" class="screen hidden">
+          <div class="screamer-frame">
+            <img src="assets/images/alina-screamer.jpg" alt="Сюрприз для неправильного ответа" />
+            <div class="image-fallback" aria-hidden="true">😈<small>ой баля </small></div>
+          </div>
+          <p class="kicker">Как ты бл не угадала боже</p>
+          <h2>Иди попробуй ещё раз.</h2>
+          <button id="retry-button" class="button button--dark">Вернуться к вопросу</button>
+        </div>
+
+        <div id="win-screen" class="screen hidden">
+          <div class="cake" aria-hidden="true"><span>✦</span><div class="flame"></div><div class="cake-top"></div><div class="cake-body">★</div></div>
+          <p class="kicker">10 ИЗ 10 — ЛЕГЕНДА</p>
+          <h2>Алина, с днём рождения! <span>🎂</span></h2>
+          <p class="congrats">Пусть в плейлисте будет только годнота, а на концертах — всегда лучшие места. С днюхой, злюка-блондинка с голубыми глазами.</p>
+          <button id="celebrate-button" class="button">Ещё конфетти ✨</button>
+          <button id="restart-button" class="text-button">Пройти ещё раз</button>
+        </div>
+      </section>
+    </main>
+    <div id="confetti" aria-hidden="true"></div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
