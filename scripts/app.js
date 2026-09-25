@@ -9,11 +9,11 @@ const trackQuestions = [
 ];
 
 const lyricQuestions = [
-  { type: 'lyrics', artist: 'PHARAOH', lyric: 'ВСТАВЬ СЮДА СТРОКУ ИЗ ТРЕКА PHARAOH' },
-  { type: 'lyrics', artist: 'PHARAOH', lyric: 'ВСТАВЬ СЮДА ЕЩЁ ОДНУ СТРОКУ ИЗ ТРЕКА PHARAOH' },
-  { type: 'lyrics', artist: 'GONE.Fludd', lyric: 'ВСТАВЬ СЮДА СТРОКУ ИЗ ТРЕКА GONE.Fludd' },
-  { type: 'lyrics', artist: 'GONE.Fludd', lyric: 'ВСТАВЬ СЮДА ЕЩЁ ОДНУ СТРОКУ ИЗ ТРЕКА GONE.Fludd' },
-  { type: 'lyrics', artist: 'SALUKI', lyric: 'ВСТАВЬ СЮДА СТРОКУ ИЗ ТРЕКА SALUKI' },
+  { type: 'lyrics', artist: 'PHARAOH', lyric: 'Кем ты себя чувствуешь после веселья дикого? Три дня работы мамы — дилеру с тебя убитого' },
+  { type: 'lyrics', artist: 'PHARAOH', lyric: 'Сейчас суббота, твои губы снова входят в роль, но я тут не для того, чтобы верить твоим слезам' },
+  { type: 'lyrics', artist: 'GONE.Fludd', lyric: 'Зачем все деньги, если не с кем тратить?   Нужен совет, платина не сможет дать его' },
+  { type: 'lyrics', artist: 'GONE.Fludd', lyric: 'Несу большие яйца, но я не тусуюсь с курами  Импакт, как увалень, горе-рэп меня уморил' },
+  { type: 'lyrics', artist: 'SALUKI', lyric: 'Я не ревную тебя, просто мои загоны' },
 ];
 
 const artists = ['PHARAOH', 'SALUKI', 'GONE.Fludd', 'MORGENSHTERN'];
